@@ -28,7 +28,7 @@ exports.run = (client, message, args, tools) => {
     !message.mentions.members.first().user.username ===
     message.isMentioned(message.author)
   ) {
-    const akinjs1 = new Discord.RichEmbed()
+    const akinjs1 = new Discord.MessageEmbed()
       .setDescription(
         `\`${message.mentions.members.first().user.username}#${message.mentions.members.first().user.discriminator}\` , \`${message.author.username}#${message.author.discriminator}\` tarafından tutuklandı.`
       )
@@ -37,7 +37,7 @@ exports.run = (client, message, args, tools) => {
     return;
   }
   if (message.author.id === kullanıcı.id) {
-    const akinjs1 = new Discord.RichEmbed()
+    const akinjs1 = new Discord.MessageEmbed()
       .setTitle(`Kendini tutuklayacak kadar suçlu musun ? 😟`)
       .setImage(resimler);
     message.channel.send({ embed: akinjs1 });
